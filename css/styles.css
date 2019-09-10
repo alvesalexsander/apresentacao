@@ -171,18 +171,19 @@ ul li h2 {
   box-shadow: 12px 12px 0px #0f7fe0;
 }
 .section #aboutImage {
-  background: url("../assests/img/eu.jpg");
+  background: url("../assests/img/eu.jpg") #000;
   background-position-x: -80px;
   clip-path: circle(62.3% at 37% 37%);
   background-size: cover;
 }
 .section #experienceImage {
-  background: url("../assests/img/exp.png") no-repeat;
+  background: url("../assests/img/exp.png") no-repeat #000;
+  background-position-x: -30px;
   clip-path: circle(62.3% at 37% 37%);
   background-size: cover;
 }
 .section #ibmImage {
-  background: url("../assests/img/ibm_logo.png") no-repeat;
+  background: url("../assests/img/ibm_logo.png") no-repeat #000;
   clip-path: circle(62.3% at 37% 37%);
   background-size: cover;
   -moz-box-shadow: inset 30px -30px 100px #000000;
@@ -199,7 +200,7 @@ ul li h2 {
   left: 56.35%;
   -webkit-clip-path: circle(62.3% at 64% 37%);
   clip-path: circle(62.3% at 64% 37%);
-  background: url("../assests/img/euw.jpg") no-repeat;
+  background: url("../assests/img/euw.jpg") no-repeat #000;
   background-size: cover;
   background-position-x: 0px;
   -moz-box-shadow: inset 30px -30px 100px #000000;
