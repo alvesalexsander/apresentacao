@@ -129,106 +129,18 @@ setTimeout(() => {
     if(!wait){
 
         $(window).bind('keydown', function(event) {
-            switch(event.which) {        
-                case 38: if (wait == false) {
-        
-                    if(active != startElem){
-    
-                        if(this.activeIndex > 0){
-                            this.activeIndex--;
-                        } else {
-                            if(this.activeIndex == 0){
-                                active = $("#about");
-                                after = active.next();
-                                before = active.prev();
-                            }
-                        }
-    
-                        let animationIn = setTimeout(() => {
-                            animationFrameText.html(contentItems[this.activeIndex]);
-                            $("body").append(animationFrame);
-                        }, 100);
-    
-                        let toggleClass = setTimeout(() => {
-    
-                            if(active[0].id == "about"){
-                                return false;
-                            } else {
-                                this.active.toggleClass("contentActive");
-                                this.active.toggleClass("contentHidden");
-                                this.before.toggleClass("contentHidden");
-                                this.before.toggleClass("contentActive");
-                            }
-                            
-                            if(this.activeIndex == 0){
-                                active = $("#about");
-                                after = active.next();
-                                before = active.prev();
-                            } else {
-                                active = this.before;
-                                after = active.next();
-                                before = active.prev();
-                            }
-                        }, 600);
-    
-                        waitRelease = setTimeout(()=>{
-                            wait = false;
-                            clearTimeout(waitRelease);
-                        }, 700);
-    
-                        wait = true;
-                    }
-            
-                }
+            switch(event.which) {   
+                case 37: prevSlide();
                 break;
-        
-                case 40: if(wait == false) {
-        
-                    if(active != endElem){
+                
+                case 38: prevSlide();
+                break;
 
-                        if(this.activeIndex < 3){
-                            this.activeIndex++;
-                        }
-    
-                        let animationIn = setTimeout(() =>{
-                            animationFrameText.html(contentItems[this.activeIndex]);
-                            $("body").append(animationFrame);
-                        }, 100);
-    
-                        let toggleClass = setTimeout(() => {
-    
-                            if(active[0].id == "ibm"){
-                                return false;
-                            } else {
-                                this.active.toggleClass("contentActive");
-                                this.active.toggleClass("contentHidden");
-                                this.after.toggleClass("contentHidden");
-                                this.after.toggleClass("contentActive");
-                            }
-                            
-                            if(this.activeIndex == 3){
-                                active = $("#ibm");
-                                after = active.next();
-                                before = active.prev();
-                            } else {
-                                active = after;
-                                after = active.next();
-                                before = active.prev();
-                            }
-                            
-                        }, 600);
-            
-                        waitRelease = setTimeout(()=>{
-                            wait = false;
-                            clearTimeout(waitRelease);
-                        }, 700);
-            
-                        wait = true;
-                    } else {
-                        return false;
-                    }
-            
-                }
+                case 39: nextSlide();
+                break;
+
+        
+                case 40: nextSlide();
                 break;
         
                 default: return;
@@ -240,3 +152,106 @@ setTimeout(() => {
     }
 
 }, 700)
+
+function prevSlide(){
+    if (wait == false) {
+        
+        if(active != startElem){
+
+            if(this.activeIndex > 0){
+                this.activeIndex--;
+            } else {
+                if(this.activeIndex == 0){
+                    active = $("#about");
+                    after = active.next();
+                    before = active.prev();
+                }
+            }
+
+            let animationIn = setTimeout(() => {
+                animationFrameText.html(contentItems[this.activeIndex]);
+                $("body").append(animationFrame);
+            }, 100);
+
+            let toggleClass = setTimeout(() => {
+
+                if(active[0].id == "about"){
+                    return false;
+                } else {
+                    this.active.toggleClass("contentActive");
+                    this.active.toggleClass("contentHidden");
+                    this.before.toggleClass("contentHidden");
+                    this.before.toggleClass("contentActive");
+                }
+                
+                if(this.activeIndex == 0){
+                    active = $("#about");
+                    after = active.next();
+                    before = active.prev();
+                } else {
+                    active = this.before;
+                    after = active.next();
+                    before = active.prev();
+                }
+            }, 600);
+
+            waitRelease = setTimeout(()=>{
+                wait = false;
+                clearTimeout(waitRelease);
+            }, 700);
+
+            wait = true;
+        }
+
+    }
+}
+
+function nextSlide(){
+    if(wait == false) {
+        
+        if(active != endElem){
+
+            if(this.activeIndex < 3){
+                this.activeIndex++;
+            }
+
+            let animationIn = setTimeout(() =>{
+                animationFrameText.html(contentItems[this.activeIndex]);
+                $("body").append(animationFrame);
+            }, 100);
+
+            let toggleClass = setTimeout(() => {
+
+                if(active[0].id == "ibm"){
+                    return false;
+                } else {
+                    this.active.toggleClass("contentActive");
+                    this.active.toggleClass("contentHidden");
+                    this.after.toggleClass("contentHidden");
+                    this.after.toggleClass("contentActive");
+                }
+                
+                if(this.activeIndex == 3){
+                    active = $("#ibm");
+                    after = active.next();
+                    before = active.prev();
+                } else {
+                    active = after;
+                    after = active.next();
+                    before = active.prev();
+                }
+                
+            }, 600);
+
+            waitRelease = setTimeout(()=>{
+                wait = false;
+                clearTimeout(waitRelease);
+            }, 700);
+
+            wait = true;
+        } else {
+            return false;
+        }
+
+    }
+}
