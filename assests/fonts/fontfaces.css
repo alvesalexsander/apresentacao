@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url('WorkSans-SemiBold.woff2') format('woff2'),
+        url('WorkSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('NotoSerif-Bold.woff2') format('woff2'),
+        url('NotoSerif-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Homemade Apple';
+    src: url('HomemadeApple-Regular.woff2') format('woff2'),
+        url('HomemadeApple-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Serif';
+    src: url('NotoSerif.woff2') format('woff2'),
+        url('NotoSerif.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

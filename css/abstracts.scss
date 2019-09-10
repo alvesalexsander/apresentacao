@@ -1,0 +1,39 @@
+.contentHidden{
+    opacity: 0;
+}
+
+.contentActive{
+    opacity: 1;
+}
+
+@keyframes grow{
+    0%{
+        transform: scale(0);
+    }
+
+    50%{
+        transform: scale(50);
+    }
+
+    100%{
+        transform: scale(0);
+    }
+}
+
+@keyframes titleShow{
+    0%{
+        opacity: 0;
+    }
+
+    20%{
+        opacity: 1;
+    }
+    
+    99%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}

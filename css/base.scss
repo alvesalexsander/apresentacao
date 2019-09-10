@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+html{
+    background: url("../assests/img/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+path{
+    fill: #fff;
+}
+
+svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
