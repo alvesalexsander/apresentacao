@@ -88,7 +88,7 @@ ul li h2 {
   transform: translate(-50%, -50%);
   background-color: #033968;
   height: 100%;
-  min-width: 1100px;
+  min-width: 68.75em;
   box-shadow: 20px 30px 20px #000;
   border-radius: 4px;
 }
@@ -226,7 +226,7 @@ ul li h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
-  min-width: 1100px;
+  min-width: 68.75em;
   border-radius: 4px;
   clip-path: url(#clipPath);
 }
@@ -274,11 +274,11 @@ ul li h2 {
 
 @media (min-height: 800px) {
   .section, .animation {
-    height: 85%;
+    height: 45.9375em;
   }
 
   #rect {
-    height: 735px;
+    height: 45.9375em;
   }
 }
 
