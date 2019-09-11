@@ -235,3 +235,18 @@
         height: 45.9375em;
     }
 }
+
+@media(min-width: 2000px){
+    .section, .animation{
+        top: 42.5%;
+        left: 42.5%;
+    }
+}
+
+@media(min-width: 3000px){
+    .section, .animation{
+        top: 32%;
+        left: 37%;
+        transform: scale(2.5);
+    }
+}
